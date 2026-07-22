@@ -1,23 +1,25 @@
-import { Routes, Route, Link } from 'react-router-dom'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
+import Header from './components/Header'
+import Footer from './components/Footer'
 import Home from './pages/Home'
-import Demo from './pages/Demo'
+import MeetTheTeam from './pages/MeetTheTeam'
+import OurServices from './pages/OurServices'
+import Gallery from './pages/Gallery'
 
 function App() {
   return (
     <>
-      <nav style={{ padding: '1rem', borderBottom: '1px solid #ccc' }}>
-        <Link to="/" style={{ marginRight: '1rem' }}>Home</Link>
-        <Link to="/demo">Demo</Link>
-      </nav>
+      <Header />
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/demo" element={<Demo />} />
+        <Route path="/meet-the-team" element={<MeetTheTeam />} />
+        <Route path="/services" element={<OurServices />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
+
+      <Footer />
     </>
   )
 }
