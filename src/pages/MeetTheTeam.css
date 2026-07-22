@@ -1,0 +1,119 @@
+.team-page {
+  flex-grow: 1;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 32px 24px 56px;
+  text-align: left;
+}
+
+.team-title {
+  margin: 8px 0 28px;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--pb-ink);
+}
+
+/* ---- Team grid ---- */
+.team-grid {
+  display: flex;
+ 
+}
+
+.member-name {
+  margin: 0 0 20px;
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--pb-ink);
+}
+
+.member--raven .member-name {
+  text-align: right;
+}
+
+.member-composition {
+  position: relative;
+  padding-top: 30px;
+}
+
+.member-block {
+  box-sizing: border-box;
+  min-height: 230px;
+  padding: 24px;
+}
+
+.member-bio {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.member-article {
+  display: flex;
+  flex-direction: column;
+  width: 100%
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+/* ---- Book Now CTA ---- */
+.team-book {
+  display: block;
+  width: min(100%, 440px);
+  box-sizing: border-box;
+  margin: 48px auto 0;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--pb-ink);
+  background: var(--pb-teal);
+  border: 3px solid var(--pb-ink);
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.18);
+}
+.team-book:hover {
+  filter: brightness(0.97);
+}
+
+/* ---- Desktop: two columns side by side ---- */
+@media (min-width: 1025px) {
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .member--raven .member-name {
+    text-align: left;
+  }
+  .member-block {
+    min-height: 300px;
+  }
+  .member--freya .member-photo {
+    width: 46%;
+  }
+  .member--freya .member-bio {
+    max-width: 48%;
+  }
+  .member--raven .member-photo {
+    width: 52%;
+  }
+  .member--raven .member-bio {
+    margin-left: 56%;
+  }
+  .container {
+    flex-direction: row;
+  }
+  .member-article {
+    width: 50%;
+  }
+}
+

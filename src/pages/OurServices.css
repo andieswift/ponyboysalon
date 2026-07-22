@@ -1,0 +1,102 @@
+.services-page {
+  flex-grow: 1;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 32px 20px 56px;
+  text-align: left;
+
+  --svc-pink: #fd81e0;
+  --svc-line: #ee7adb;
+  --svc-plus: #e24fc9;
+}
+
+.services-title {
+  margin: 0 0 18px;
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--pb-ink);
+}
+
+/* ---- Accordion ---- */
+.accordion {
+  border-top: 2px solid var(--svc-line);
+}
+
+.acc-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-sizing: border-box;
+  padding: 22px 4px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid var(--svc-line);
+  text-align: left;
+  cursor: pointer;
+}
+
+.acc-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--pb-ink);
+}
+
+.acc-icon {
+  flex-shrink: 0;
+  color: var(--svc-plus);
+}
+
+/* Smooth expand/collapse via animatable grid rows */
+.acc-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  background: var(--svc-pink);
+  transition: grid-template-rows 0.32s ease;
+}
+
+.acc-panel.open {
+  grid-template-rows: 1fr;
+}
+
+.acc-panel-inner {
+  overflow: hidden;
+  padding: 0 22px;
+}
+
+.acc-panel.open .acc-panel-inner {
+  padding: 20px 22px 24px;
+}
+
+/* ---- Service line ---- */
+.svc-item {
+  padding: 8px 0;
+}
+
+.svc-name {
+  display: block;
+  font-weight: 800;
+  color: var(--pb-ink);
+}
+
+.svc-price {
+  display: block;
+  margin-top: 2px;
+  text-align: right;
+  font-size: 15px;
+  color: var(--pb-ink);
+}
+
+.svc-note {
+  font-weight: 700;
+}
+
+.acc-note {
+  margin: 4px 0 0;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--pb-ink);
+}
