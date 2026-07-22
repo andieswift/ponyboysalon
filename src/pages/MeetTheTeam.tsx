@@ -1,4 +1,3 @@
-import { BOOKING_URL } from '../config'
 import freyaPhoto from '../assets/freya-blob.png'
 import ravenPhoto from '../assets/raven-blob.png'
 import './MeetTheTeam.css'
